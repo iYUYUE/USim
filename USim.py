@@ -55,7 +55,28 @@ def main(args):
                 for line in fl:
                     # reference_sentences.append(line.strip())
                     reference_files.append(reference_file)
-        res = [str(USim(s, r, args.parse_dir, i, i + len(source_sentences))) + "\n" for i, (s,
+
+        
+        if args.alignment_path is not None:
+            if not os.path.isfile(args.alignment_path):
+               print("File path {} does not exist. Exiting...".format(args.alignment_path))
+               sys.exit()
+
+            list_of_dicts = []
+            with open(args.alignment_path) as fp:
+                for line in fp:
+                    tdict = {}
+                    for p in line.split(','):
+                        if(len(p) > 1):
+                            tpair = p.split('-')
+                            # print('Adding pair', tpair[0], '-', tpair[1], '\n')
+                            tdict[tpair[0]] = tpair[1]
+                    list_of_dicts.append(tdict)
+
+            res = [str(USim(s, r, args.parse_dir, i, i + len(source_sentences), list_of_dicts[i])) + "\n" for i, (s,
+               r) in enumerate(zip(source_files, reference_files))]
+        else:
+            res = [str(USim(s, r, args.parse_dir, i, i + len(source_sentences))) + "\n" for i, (s,
                r) in enumerate(zip(source_files, reference_files))]
 
     with open(args.output_file, "w") as fl:
@@ -190,9 +211,12 @@ def ucca_parse_files(filenames, output_dir, model_path, clean=False, normalize_s
 
 
 def _ucca_parse_text(text, output_dir, filename, clean, normalize_sentence, model_path):
-    text = [normalize_sentence(x) for x in text]
-    text = from_text(text, split=True, one_per_line=True)
-    text = list(text)
+    # text = [normalize_sentence(x) for x in text]
+    # text = from_text(text, split=True, one_per_line=True)
+    # text = list(text)
+    # By pass the UCCA tokenizor
+    text = [next(from_text(normalize_sentence(val).split(' '), passage_id=idx, tokenized=True)) for idx, val in enumerate(text)]
+    # print(text)
     parser = get_parser(model_path)
     out_location = os.path.dirname(parse_location(output_dir, filename, 0))
     if not os.path.isdir(out_location):
@@ -281,7 +305,7 @@ def parsed_sentence2xml(sentence, parse_dir, sent_id=None, normalize_sentence=no
         return file2passage(parse_location(parse_dir, sentence, sent_id))
 
 
-def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, normalize_sentence=normalize_sentence):
+def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, dic=None, normalize_sentence=normalize_sentence):
     """ accepts filename instead of sentence\source and a sentence id\source_sentence id for locating the file"""
     if align.regularize_word(source) == "":
         if align.regularize_word(sentence) == "":
@@ -294,8 +318,7 @@ def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, normaliz
         source, parse_dir, source_id, normalize_sentence)
     sentence_xml = parsed_sentence2xml(
         sentence, parse_dir, sentence_id, normalize_sentence)
-    return align.fully_aligned_distance(source_xml, sentence_xml)
-
+    return align.fully_aligned_distance(source_xml, sentence_xml, dic)
 
 def announce_finish():
     if sys.platform == "linux":
@@ -323,6 +346,7 @@ if __name__ == '__main__':
     parser.add_argument('-ss', '--source_sentences', nargs='+')
     parser.add_argument('-rs', '--reference_sentences', nargs='+')
     parser.add_argument('-p', "--parser_path", help="The path to the tupa model to be used, if no parameter is passed the hard-coded USim.PARSER_PATH path would be used")
+    parser.add_argument('-a', "--alignment_path", help="The path to the alignment file")
 
     args, unknown = parser.parse_known_args()
     PARSER_PATH = args.parser_path

@@ -31,3 +31,13 @@ pip install munkres
 
 Usage example (assuming parser module was changed in the code, otherwise add -p flag):
 python USim.py parse out.out -ss "I love rusty spoons", "nothing matters" -rs "he shares pretty cars", "nothing indeed"
+
+== Scripts ==
+
+python3 USim.py parse output/p4p.out -sf p4p_source.txt -rf p4p_reference.txt -p ../tupa/models/ucca-bilstm  -a p4p_alignment.txt
+
+to visualize, run "bash p4p.sh [file id]"
+
+python3 stats.py output/p4p.out
+
+python3 stats.py [+/-] output/p4p.out
