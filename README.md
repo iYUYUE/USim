@@ -36,6 +36,8 @@ python USim.py parse out.out -ss "I love rusty spoons", "nothing matters" -rs "h
 
 python3 USim.py parse output/p4p.out -sf p4p_source.txt -rf p4p_reference.txt -p ../tupa/models/ucca-bilstm  -a p4p_alignment.txt
 
+python3 USim.py parse output/p4p.align.out -sf p4p_source.txt -rf p4p_reference.txt -p ../tupa/models/ucca-bilstm
+
 to visualize, run "bash p4p.sh [file id]"
 
 without alignment from paraphrase annonatation:
@@ -46,7 +48,7 @@ with alignment from paraphrase annonatation:
 
 python3 stats.py output/p4p.align.out
 
-python3 stats.py [+/-] output/p4p.out
+python3 rank.py [+/-] output/p4p.out
 
 to get corpus wide analysis:
 
