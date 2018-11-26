@@ -40,7 +40,7 @@ def main(args):
         ucca_parse_sentences(
             args.source_sentences + args.reference_sentences, args.parse_dir, args.parser_path)
         source_sentences, reference_sentences = args.source_sentences, args.reference_sentences
-        res = [str(USim(s, r, args.parse_dir)) + "\n" for s,
+        res = [USim(s, r, args.parse_dir) + "\n" for s,
                r in zip(source_sentences, reference_sentences)]
     else:
         ucca_parse_files(args.source_files + args.reference_files,
@@ -345,32 +345,41 @@ def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, dic=None
 
     total = 0
     count = 0
+    ret = ''
 
-    for k, v in dic.items():
-        total = total + 1
-        ks = k.split("_")
-        vs = v.split("-")[0].split("_")
-        cate = v.split("-")[1]
-        len1 = 999999
-        len2 = 999999
-        label1 = ''
-        label2 = ''
+    if len(dic) > 0:
+        for k, v in dic.items():
+            ret = ret + k + '-' + v
+            total = total + 1
+            ks = k.split("_")
+            vs = v.split("-")[0].split("_")
+            len1 = 999999
+            len2 = 999999
+            label1 = ''
+            label2 = ''
 
-        for node1 in nodes1:
-            tp1 = [str(term.para_pos) for term in node1.get_terminals()]
-            if(set(ks).issubset(tp1) and len(tp1) < len1):
-                len1 = len(tp1)
-                label1 = node1.ftag
+            for node1 in nodes1:
+                tp1 = [str(term.para_pos) for term in node1.get_terminals()]
+                if(set(ks).issubset(tp1) and len(tp1) < len1):
+                    len1 = len(tp1)
+                    label1 = node1.ftag
 
-        for node2 in nodes2:
-            tp2 = [str(term.para_pos) for term in node2.get_terminals()]
-            if(set(vs).issubset(tp2) and len(tp2) < len2):
-                len2 = len(tp2)
-                label2 = node2.ftag
+            for node2 in nodes2:
+                tp2 = [str(term.para_pos) for term in node2.get_terminals()]
+                if(set(vs).issubset(tp2) and len(tp2) < len2):
+                    len2 = len(tp2)
+                    label2 = node2.ftag
 
-        if label1 != '' and label2 != '' and label1 == label2:
-            count = count + 1
-    return count / total
+            if label1 != '' and label2 != '' and label1 == label2:
+                count = count + 1
+
+            ret = ret + '-' + label1 + '-' + label2 + ','
+        
+        ret = ret + str(count / total)
+    else:
+        ret = 'EOF'
+    print (ret)
+    return ret
 
 def announce_finish():
     if sys.platform == "linux":
