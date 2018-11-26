@@ -38,10 +38,16 @@ python3 USim.py parse output/p4p.out -sf p4p_source.txt -rf p4p_reference.txt -p
 
 to visualize, run "bash p4p.sh [file id]"
 
-without alignment from paraphrase annonatation
+without alignment from paraphrase annonatation:
+
 python3 stats.py output/p4p.out
 
-with alignment from paraphrase annonatation
+with alignment from paraphrase annonatation:
+
 python3 stats.py output/p4p.align.out
 
 python3 stats.py [+/-] output/p4p.out
+
+to get corpus wide analysis:
+
+python USim_corpus.py parse output/p4p.corpus.out -sf p4p_source.txt -rf p4p_reference.txt -p ../tupa/models/ucca-bilstm  -a p4p_alignment.txt

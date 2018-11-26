@@ -13,9 +13,14 @@ import re
 from ucca.ioutil import file2passage
 import codecs
 
-import scripts.distances.align_corpus as align
+import scripts.distances.align as align
 from ucca.ioutil import passage2file
 from ucca.convert import from_text
+
+from ucca.textutil import break2sentences, extract_terminals
+from ucca import evaluation
+from ucca import layer0, layer1
+
 
 POOL_SIZE = multiprocessing.cpu_count()
 full_rerank = True
@@ -84,6 +89,18 @@ def main(args):
 # a lot of code duplication because pooling doesn't react well to passing
 # different lambdas as an argument
 
+def is_foundational(node):
+    return node.tag == layer1.NodeTags.Foundational
+
+
+def is_passage(n):
+    return not bool(n.fparent)
+
+
+def is_comparable(n):
+    """checks if the node is a node that should be compared between passages"""
+    return is_foundational(n) and (not is_passage(n))
+    # return is_terminal(n)
 
 def normalize_sentence(s):
     s = re.sub(r"\W+", r" ", s)
@@ -318,7 +335,42 @@ def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, dic=None
         source, parse_dir, source_id, normalize_sentence)
     sentence_xml = parsed_sentence2xml(
         sentence, parse_dir, sentence_id, normalize_sentence)
-    return align.fully_aligned_distance(source_xml, sentence_xml, dic)
+
+    if dic is None:
+        raise Exception('alignment file needed')
+
+    """compares each one to its' best mapping"""
+    nodes1 = set(node for node in source_xml.layer(layer1.LAYER_ID).all if is_comparable(node))
+    nodes2 = set(node for node in sentence_xml.layer(layer1.LAYER_ID).all if is_comparable(node))
+
+    total = 0
+    count = 0
+
+    for k, v in dic.items():
+        total = total + 1
+        ks = k.split("_")
+        vs = v.split("-")[0].split("_")
+        cate = v.split("-")[1]
+        len1 = 999999
+        len2 = 999999
+        label1 = ''
+        label2 = ''
+
+        for node1 in nodes1:
+            tp1 = [str(term.para_pos) for term in node1.get_terminals()]
+            if(set(ks).issubset(tp1) and len(tp1) < len1):
+                len1 = len(tp1)
+                label1 = node1.ftag
+
+        for node2 in nodes2:
+            tp2 = [str(term.para_pos) for term in node2.get_terminals()]
+            if(set(vs).issubset(tp2) and len(tp2) < len2):
+                len2 = len(tp2)
+                label2 = node2.ftag
+
+        if label1 != '' and label2 != '' and label1 == label2:
+            count = count + 1
+    return count / total
 
 def announce_finish():
     if sys.platform == "linux":
