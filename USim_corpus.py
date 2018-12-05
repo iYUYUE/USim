@@ -203,7 +203,7 @@ def ucca_parse_sentences(sentences, output_dir, model_path, clean=False, normali
             # adds sentences to sentence ids memory
             tmp = get_sentence_id(sentence, out_path, True, normalize_sentence)
             assert tmp == i, (tmp, i)
-        print(to_parse)
+        #print(to_parse)
         print("Parsing", len(to_parse), "sentences.", len(
             sentences) - len(to_parse), "sentences already parsed.")
         _ucca_parse_text(to_parse, out_path, "", clean,
@@ -378,7 +378,7 @@ def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, dic=None
         ret = ret + str(count / total)
     else:
         ret = 'EOF'
-    print (ret)
+    # print (ret)
     return ret
 
 def announce_finish():

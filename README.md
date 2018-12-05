@@ -65,3 +65,5 @@ python3 rank.py [+/-] output/p4p.out
 to get corpus wide analysis:
 
 python USim_corpus.py parse output/p4p.corpus.out -sf p4p_source.txt -rf p4p_reference.txt -p ../tupa/models/ucca-bilstm  -a p4p_alignment.txt
+
+python USim_corpus.py parse output/MSRPA.corpus.out -sf MSRPA_source.txt -rf MSRPA_reference.txt -p ../tupa/models/ucca-bilstm  -a MSRPA_alignment.txt
