@@ -44,7 +44,11 @@ python3 USim.py parse output/MSRPA.out -sf MSRPA_source.txt -rf MSRPA_reference.
 
 python3 USim.py parse output/msr_0.out -sf msr_source_0.txt -rf msr_reference_0.txt -p ../tupa/models/ucca-bilstm
 
+python3 USim.py parse output/msr_0_r.out -sf msr_reference_0.txt -rf msr_source_0.txt -p ../tupa/models/ucca-bilstm
+
 python3 USim.py parse output/msr_1.out -sf msr_source_1.txt -rf msr_reference_1.txt -p ../tupa/models/ucca-bilstm
+
+python3 USim.py parse output/msr_1_r.out -sf msr_reference_1.txt -rf msr_source_1.txt -p ../tupa/models/ucca-bilstm
 
 to visualize, run "bash p4p.sh [file id]"
 
