@@ -50,7 +50,9 @@ python3 USim.py parse output/msr_1.out -sf msr_source_1.txt -rf msr_reference_1.
 
 python3 USim.py parse output/msr_1_r.out -sf msr_reference_1.txt -rf msr_source_1.txt -p ../tupa/models/ucca-bilstm
 
-to visualize, run "bash p4p.sh [file id]"
+to visualize p4p, run "bash p4p.sh [file id]"
+
+to visualize msrpa, run "bash msrpa_0.sh [file id]"
 
 without alignment from paraphrase annonatation:
 
