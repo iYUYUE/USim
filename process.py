@@ -22,10 +22,8 @@ with open(path, 'r', encoding='utf8') as f:
 
             align = sent.split('-')
             source = merge_tok(align[0])
-            if '_' not in source:
-                break
             target = merge_tok(align[1])
-            if '_' not in target:
+            if '_' not in source or '_' not in target:
                 break
             source_ucca_node = align[3]
             target_ucca_node = align[4]
