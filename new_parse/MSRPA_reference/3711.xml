@@ -1,11 +1,11 @@
-<root annotationID="0" passageID="1_3711">
+<root annotationID="0" passageID="3711_0">
   <attributes />
   <extra format="ucca" />
   <layer layerID="0">
     <attributes />
-    <extra doc="[[[5059648917813135842, 7425985699627899538, 15267657372422890137, 89, 0, 2, 412, 1, 18200729499220207786, 5582244037879929967, 5059648917813135842], [1500338764782723570, 1500338764782723570, 15308085513773655218, 91, 0, 2, 426, 1, 13110060611322374290, 1720370409040345145, 14807582721499657499], [9921686513378912864, 10382539506755952630, 17109001835818727656, 99, 0, 2, 8206900633647566924, 0, 4088098365541558500, 260667111241363922, 9921686513378912864], [3194226484742107227, 3194226484742107227, 164681854541413346, 85, 0, 2, 397, -1, 13110060611322374290, 11901859001352538922, 11593690929944126543], [299585715855414307, 299585715855414307, 8427216679587749980, 92, 391, 3, 12837356684637874264, 1, 17492242978914757331, 5533571732986600803, 15627227208712579746], [7608410066268782076, 7608410066268782076, 783433942507015291, 91, 391, 1, 436, -2, 4088098365541558500, 9409450202036847209, 7608410066268782076], [11925087429320733112, 14278262417543494430, 3822385049556375858, 99, 0, 2, 440, -4, 13110060611322374290, 16900879642891266615, 17551718516836219974], [3791531372978436496, 3791531372978436496, 1292078113972184607, 84, 0, 2, 440, -1, 4370460163704169311, 15369245168918225700, 3791531372978436496], [12513610393978129441, null, 4062917326063685704, 83, 0, 2, 437, 4, 4088098365541558500, 5097672513440128799, 12513610393978129441], [7199752172782760331, 7199752172782760331, 10554686591937588953, 83, 388, 3, 399, 1, 13110060611322374290, 2985121464356781022, 10806788082624814911], [7455104463836291444, 2481840623600306735, 15794550382381185553, 95, 388, 1, 7037928807040764755, 2, 16072095006890171862, 5582244037879929967, 1608482186128794349], [16611556673110956997, 7742618937320755052, 15794550382381185553, 95, 382, 3, 7037928807040764755, 1, 9346084826459880894, 8804677687338025421, 13611846068488418672], [15060127769916968652, 15060127769916968652, 15308085513773655218, 91, 0, 2, 436, -5, 13110060611322374290, 2985121464356781022, 7453290643414848516], [886050111519832510, 886050111519832510, 1292078113972184607, 84, 0, 2, 440, -1, 4370460163704169311, 1489474827855109852, 886050111519832510], [7223199249304597552, 7223199249304597552, 8427216679587749980, 92, 391, 3, 12837356684637874264, 1, 17492242978914757331, 5533571732986600803, 12123907120145155903], [7608410066268782076, 7608410066268782076, 783433942507015291, 91, 391, 1, 436, -2, 4088098365541558500, 9409450202036847209, 7608410066268782076], [14560795576765492085, 14560795576765492085, 17571114184892886314, 88, 0, 2, 404, -10, 4088098365541558500, 15598372446745583797, 14560795576765492085], [6421409113692203669, 6421409113692203669, 164681854541413346, 85, 0, 2, 407, -11, 13110060611322374290, 8148669997605808657, 2646123857127441627], [5237733503949663011, 5237733503949663011, 164681854541413346, 85, 0, 2, 397, -1, 13110060611322374290, 16978132545290669629, 13419580929783865587], [7831658034963690409, 7831658034963690409, 1292078113972184607, 84, 0, 2, 440, -2, 13110060611322374290, 13110760720460257827, 16701608521236914874], [3194226484742107227, 3194226484742107227, 1292078113972184607, 84, 391, 3, 440, -1, 13110060611322374290, 11901859001352538922, 11593690929944126543], [762070130654393282, 762070130654393282, 8427216679587749980, 92, 391, 1, 12837356684637874264, 1, 17492242978914757331, 5533571732986600803, 2887719090584763061], [7608410066268782076, 7608410066268782076, 15308085513773655218, 91, 391, 1, 436, -2, 4088098365541558500, 9409450202036847209, 7608410066268782076], [3002984154512732771, 3002984154512732771, 1292078113972184607, 84, 0, 2, 440, -4, 4370460163704169311, 5097672513440128799, 3002984154512732771], [1108542766809193907, 1108542766809193907, 10554686591937588953, 83, 0, 2, 399, 2, 13110060611322374290, 1720370409040345145, 3993046494054999992], [1900673716595431757, 3460738943070548167, 10554686591937588953, 83, 379, 3, 399, 1, 16072095006890171862, 14862748245026736845, 3477492905443839178], [14704457583367611984, 14704457583367611984, 15308085513773655218, 91, 0, 2, 436, -3, 13110060611322374290, 15369245168918225700, 16605163981368088708], [5640369432778651323, 5640369432778651323, 1292078113972184607, 84, 0, 2, 440, -8, 4370460163704169311, 1489474827855109852, 5640369432778651323], [7455104463836291444, 2481840623600306735, 15794550382381185553, 95, 388, 3, 436, -1, 16072095006890171862, 5582244037879929967, 1608482186128794349], [12646065887601541794, 12646065887601541794, 12646065887601541794, 96, 0, 2, 442, -27, 12646065887601541794, 12646065887601541794, 12646065887601541794]]]" />
+    <extra doc="[[[7425985699627899538, 7425985699627899538, 15267657372422890137, 89, 0, 2, 412, 1, 4088098365541558500, 15369245168918225700, 7425985699627899538], [1500338764782723570, 1500338764782723570, 15308085513773655218, 91, 0, 2, 426, 1, 13110060611322374290, 1720370409040345145, 14807582721499657499], [9921686513378912864, 10382539506755952630, 17109001835818727656, 99, 0, 2, 8206900633647566924, 0, 4088098365541558500, 260667111241363922, 9921686513378912864], [3194226484742107227, 3194226484742107227, 164681854541413346, 85, 0, 2, 397, -1, 13110060611322374290, 11901859001352538922, 11593690929944126543], [299585715855414307, 299585715855414307, 8427216679587749980, 92, 391, 3, 12837356684637874264, 1, 17492242978914757331, 5533571732986600803, 15627227208712579746], [7608410066268782076, 7608410066268782076, 783433942507015291, 91, 391, 1, 436, -2, 4088098365541558500, 9409450202036847209, 7608410066268782076], [11925087429320733112, 14278262417543494430, 3822385049556375858, 99, 0, 2, 440, -4, 13110060611322374290, 16900879642891266615, 17551718516836219974], [3791531372978436496, 3791531372978436496, 1292078113972184607, 84, 0, 2, 440, -1, 4370460163704169311, 15369245168918225700, 3791531372978436496], [12513610393978129441, null, 4062917326063685704, 83, 0, 2, 437, 4, 4088098365541558500, 5097672513440128799, 12513610393978129441], [7199752172782760331, 7199752172782760331, 10554686591937588953, 83, 0, 2, 399, 1, 13110060611322374290, 2985121464356781022, 10806788082624814911], [2481840623600306735, 2481840623600306735, 15308085513773655218, 91, 388, 3, 423, 2, 13110060611322374290, 15369245168918225700, 1608482186128794349], [7742618937320755052, 7742618937320755052, 10554686591937588953, 83, 382, 3, 7037928807040764755, 1, 16048312971302757706, 12247454108283186160, 2538896950937890174], [15060127769916968652, 15060127769916968652, 15308085513773655218, 91, 0, 2, 436, -5, 13110060611322374290, 2985121464356781022, 7453290643414848516], [886050111519832510, 886050111519832510, 1292078113972184607, 84, 0, 2, 440, -1, 4370460163704169311, 1489474827855109852, 886050111519832510], [7223199249304597552, 7223199249304597552, 8427216679587749980, 92, 391, 3, 12837356684637874264, 1, 17492242978914757331, 5533571732986600803, 12123907120145155903], [7608410066268782076, 7608410066268782076, 783433942507015291, 91, 391, 1, 436, -2, 4088098365541558500, 9409450202036847209, 7608410066268782076], [14560795576765492085, 14560795576765492085, 17571114184892886314, 88, 0, 2, 404, -4, 4088098365541558500, 15598372446745583797, 14560795576765492085], [6421409113692203669, 6421409113692203669, 164681854541413346, 85, 0, 2, 397, 1, 13110060611322374290, 8148669997605808657, 2646123857127441627], [5237733503949663011, 5237733503949663011, 164681854541413346, 85, 0, 2, 397, -16, 13110060611322374290, 16978132545290669629, 13419580929783865587], [7831658034963690409, 7831658034963690409, 1292078113972184607, 84, 0, 2, 440, -1, 13110060611322374290, 13110760720460257827, 16701608521236914874], [3194226484742107227, 3194226484742107227, 1292078113972184607, 84, 391, 3, 440, -1, 13110060611322374290, 11901859001352538922, 11593690929944126543], [762070130654393282, 762070130654393282, 8427216679587749980, 92, 391, 1, 12837356684637874264, 1, 17492242978914757331, 5533571732986600803, 2887719090584763061], [7608410066268782076, 7608410066268782076, 15308085513773655218, 91, 391, 1, 436, -2, 4088098365541558500, 9409450202036847209, 7608410066268782076], [3002984154512732771, 3002984154512732771, 1292078113972184607, 84, 0, 2, 440, -5, 4370460163704169311, 5097672513440128799, 3002984154512732771], [1108542766809193907, 1108542766809193907, 10554686591937588953, 83, 0, 2, 399, 2, 13110060611322374290, 1720370409040345145, 3993046494054999992], [3460738943070548167, 3460738943070548167, 10554686591937588953, 83, 0, 2, 399, 1, 13110060611322374290, 11901859001352538922, 3477492905443839178], [14704457583367611984, 14704457583367611984, 15308085513773655218, 91, 0, 2, 436, -3, 13110060611322374290, 15369245168918225700, 16605163981368088708], [5640369432778651323, 5640369432778651323, 1292078113972184607, 84, 0, 2, 440, -9, 4370460163704169311, 1489474827855109852, 5640369432778651323], [2481840623600306735, 2481840623600306735, 15794550382381185553, 95, 388, 3, 436, -1, 13110060611322374290, 15369245168918225700, 1608482186128794349], [12646065887601541794, 12646065887601541794, 12646065887601541794, 96, 0, 2, 442, -27, 12646065887601541794, 12646065887601541794, 12646065887601541794]]]" />
     <node ID="0.1" type="Word">
-      <attributes paragraph="1" paragraph_position="1" text="The" />
+      <attributes paragraph="1" paragraph_position="1" text="the" />
     </node>
     <node ID="0.2" type="Word">
       <attributes paragraph="1" paragraph_position="2" text="euro" />
@@ -35,10 +35,10 @@
       <attributes paragraph="1" paragraph_position="10" text="late" />
     </node>
     <node ID="0.11" type="Word">
-      <attributes paragraph="1" paragraph_position="11" text="Tuesday" />
+      <attributes paragraph="1" paragraph_position="11" text="tuesday" />
     </node>
     <node ID="0.12" type="Word">
-      <attributes paragraph="1" paragraph_position="12" text="U.S." />
+      <attributes paragraph="1" paragraph_position="12" text="u.s." />
     </node>
     <node ID="0.13" type="Word">
       <attributes paragraph="1" paragraph_position="13" text="level" />
@@ -80,7 +80,7 @@
       <attributes paragraph="1" paragraph_position="25" text="early" />
     </node>
     <node ID="0.26" type="Word">
-      <attributes paragraph="1" paragraph_position="26" text="Asian" />
+      <attributes paragraph="1" paragraph_position="26" text="asian" />
     </node>
     <node ID="0.27" type="Word">
       <attributes paragraph="1" paragraph_position="27" text="trade" />
@@ -89,7 +89,7 @@
       <attributes paragraph="1" paragraph_position="28" text="on" />
     </node>
     <node ID="0.29" type="Word">
-      <attributes paragraph="1" paragraph_position="29" text="Tuesday" />
+      <attributes paragraph="1" paragraph_position="29" text="tuesday" />
     </node>
     <node ID="0.30" type="Punctuation">
       <attributes paragraph="1" paragraph_position="30" text="." />
@@ -114,19 +114,13 @@
       <edge toID="1.5" type="A">
         <attributes />
       </edge>
-      <edge toID="1.6" type="F">
+      <edge toID="1.6" type="S">
         <attributes />
       </edge>
       <edge toID="1.7" type="D">
         <attributes />
       </edge>
       <edge toID="1.8" type="A">
-        <attributes />
-      </edge>
-      <edge toID="1.9" type="S">
-        <attributes />
-      </edge>
-      <edge toID="1.10" type="A">
         <attributes />
       </edge>
     </node>
@@ -138,28 +132,28 @@
     </node>
     <node ID="1.4" type="FN">
       <attributes />
-      <edge toID="1.11" type="D">
+      <edge toID="1.9" type="D">
         <attributes />
       </edge>
-      <edge toID="1.12" type="D">
+      <edge toID="1.10" type="D">
+        <attributes />
+      </edge>
+      <edge toID="1.11" type="A">
+        <attributes />
+      </edge>
+      <edge toID="1.12" type="A">
         <attributes />
       </edge>
       <edge toID="1.13" type="A">
         <attributes />
       </edge>
-      <edge toID="1.14" type="A">
-        <attributes />
-      </edge>
-      <edge toID="1.15" type="A">
-        <attributes />
-      </edge>
     </node>
     <node ID="1.5" type="FN">
       <attributes />
-      <edge toID="1.16" type="E">
+      <edge toID="1.14" type="E">
         <attributes />
       </edge>
-      <edge toID="1.17" type="C">
+      <edge toID="1.15" type="C">
         <attributes />
       </edge>
     </node>
@@ -171,250 +165,280 @@
     </node>
     <node ID="1.7" type="FN">
       <attributes />
-      <edge toID="0.4" type="Terminal">
+      <edge toID="1.16" type="R">
+        <attributes />
+      </edge>
+      <edge toID="1.17" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.18" type="C">
         <attributes />
       </edge>
     </node>
     <node ID="1.8" type="FN">
       <attributes />
-      <edge toID="1.18" type="E">
+      <edge toID="1.19" type="R">
         <attributes />
       </edge>
-      <edge toID="1.19" type="C">
+      <edge toID="1.20" type="E">
         <attributes />
       </edge>
     </node>
     <node ID="1.9" type="FN">
       <attributes />
-      <edge toID="0.7" type="Terminal">
+      <edge toID="0.18" type="Terminal">
         <attributes />
       </edge>
     </node>
     <node ID="1.10" type="FN">
       <attributes />
-      <edge toID="1.20" type="R">
-        <attributes />
-      </edge>
-      <edge toID="1.21" type="E">
-        <attributes />
-      </edge>
-      <edge toID="1.22" type="E">
-        <attributes />
-      </edge>
-      <edge toID="1.23" type="E">
-        <attributes />
-      </edge>
-      <edge toID="1.24" type="C">
-        <attributes />
-      </edge>
-      <edge toID="1.25" type="E">
+      <edge toID="0.19" type="Terminal">
         <attributes />
       </edge>
     </node>
     <node ID="1.11" type="FN">
       <attributes />
-      <edge toID="0.18" type="Terminal">
+      <edge toID="1.21" type="R">
+        <attributes />
+      </edge>
+      <edge toID="1.22" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.23" type="C">
         <attributes />
       </edge>
     </node>
     <node ID="1.12" type="FN">
       <attributes />
-      <edge toID="0.19" type="Terminal">
+      <edge toID="1.24" type="R">
+        <attributes />
+      </edge>
+      <edge toID="1.25" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.26" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.27" type="C">
         <attributes />
       </edge>
     </node>
     <node ID="1.13" type="FN">
       <attributes />
-      <edge toID="1.26" type="R">
-        <attributes />
-      </edge>
-      <edge toID="1.27" type="E">
-        <attributes />
-      </edge>
-      <edge toID="1.28" type="E">
+      <edge toID="1.28" type="R">
         <attributes />
       </edge>
       <edge toID="1.29" type="C">
         <attributes />
       </edge>
+      <edge toID="1.30" type="U">
+        <attributes />
+      </edge>
     </node>
     <node ID="1.14" type="FN">
-      <attributes />
-      <edge toID="1.30" type="R">
-        <attributes />
-      </edge>
-      <edge toID="1.31" type="E">
-        <attributes />
-      </edge>
-      <edge toID="1.32" type="E">
-        <attributes />
-      </edge>
-      <edge toID="1.33" type="C">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.15" type="FN">
-      <attributes />
-      <edge toID="1.34" type="R">
-        <attributes />
-      </edge>
-      <edge toID="1.35" type="C">
-        <attributes />
-      </edge>
-      <edge toID="1.36" type="U">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.16" type="FN">
       <attributes />
       <edge toID="0.1" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.17" type="FN">
+    <node ID="1.15" type="FN">
       <attributes />
       <edge toID="0.2" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.18" type="FN">
+    <node ID="1.16" type="FN">
+      <attributes />
+      <edge toID="0.4" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.17" type="FN">
       <attributes />
       <edge toID="0.5" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.19" type="FN">
+    <node ID="1.18" type="FN">
       <attributes />
       <edge toID="0.6" type="Terminal">
         <attributes />
       </edge>
     </node>
+    <node ID="1.19" type="FN">
+      <attributes />
+      <edge toID="0.7" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
     <node ID="1.20" type="FN">
       <attributes />
-      <edge toID="0.8" type="Terminal">
+      <edge toID="1.31" type="R">
+        <attributes />
+      </edge>
+      <edge toID="1.32" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.33" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.34" type="C">
+        <attributes />
+      </edge>
+      <edge toID="1.35" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.36" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.37" type="C">
         <attributes />
       </edge>
     </node>
     <node ID="1.21" type="FN">
       <attributes />
-      <edge toID="0.9" type="Terminal">
+      <edge toID="0.20" type="Terminal">
         <attributes />
       </edge>
     </node>
     <node ID="1.22" type="FN">
       <attributes />
-      <edge toID="0.10" type="Terminal">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.23" type="FN">
-      <attributes />
-      <edge toID="0.11" type="Terminal">
-        <attributes />
-      </edge>
-      <edge toID="0.12" type="Terminal">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.24" type="FN">
-      <attributes />
-      <edge toID="0.13" type="Terminal">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.25" type="FN">
-      <attributes />
-      <edge toID="1.37" type="R">
-        <attributes />
-      </edge>
-      <edge toID="1.38" type="E">
+      <edge toID="1.38" type="R">
         <attributes />
       </edge>
       <edge toID="1.39" type="C">
         <attributes />
       </edge>
     </node>
-    <node ID="1.26" type="FN">
-      <attributes />
-      <edge toID="0.20" type="Terminal">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.27" type="FN">
-      <attributes />
-      <edge toID="0.21" type="Terminal">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.28" type="FN">
-      <attributes />
-      <edge toID="0.22" type="Terminal">
-        <attributes />
-      </edge>
-    </node>
-    <node ID="1.29" type="FN">
+    <node ID="1.23" type="FN">
       <attributes />
       <edge toID="0.23" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.30" type="FN">
+    <node ID="1.24" type="FN">
       <attributes />
       <edge toID="0.24" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.31" type="FN">
+    <node ID="1.25" type="FN">
       <attributes />
       <edge toID="0.25" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.32" type="FN">
+    <node ID="1.26" type="FN">
       <attributes />
       <edge toID="0.26" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.33" type="FN">
+    <node ID="1.27" type="FN">
       <attributes />
       <edge toID="0.27" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.34" type="FN">
+    <node ID="1.28" type="FN">
       <attributes />
       <edge toID="0.28" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.35" type="FN">
+    <node ID="1.29" type="FN">
       <attributes />
       <edge toID="0.29" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.36" type="PNCT">
+    <node ID="1.30" type="PNCT">
       <attributes />
       <edge toID="0.30" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.37" type="FN">
+    <node ID="1.31" type="FN">
       <attributes />
-      <edge toID="0.14" type="Terminal">
+      <edge toID="0.8" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.38" type="FN">
+    <node ID="1.32" type="FN">
+      <attributes />
+      <edge toID="0.9" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.33" type="FN">
+      <attributes />
+      <edge toID="1.40" type="E">
+        <attributes />
+      </edge>
+      <edge toID="1.41" type="C">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.34" type="FN">
+      <attributes />
+      <edge toID="0.12" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.35" type="FN">
+      <attributes />
+      <edge toID="1.42" type="C">
+        <attributes />
+      </edge>
+      <edge toID="1.43" type="R">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.36" type="FN">
       <attributes />
       <edge toID="0.15" type="Terminal">
         <attributes />
       </edge>
     </node>
-    <node ID="1.39" type="FN">
+    <node ID="1.37" type="FN">
       <attributes />
       <edge toID="0.16" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.38" type="FN">
+      <attributes />
+      <edge toID="0.21" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.39" type="FN">
+      <attributes />
+      <edge toID="0.22" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.40" type="FN">
+      <attributes />
+      <edge toID="0.10" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.41" type="FN">
+      <attributes />
+      <edge toID="0.11" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.42" type="FN">
+      <attributes />
+      <edge toID="0.13" type="Terminal">
+        <attributes />
+      </edge>
+    </node>
+    <node ID="1.43" type="FN">
+      <attributes />
+      <edge toID="0.14" type="Terminal">
         <attributes />
       </edge>
     </node>
