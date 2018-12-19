@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 # path = 'output\\p4p.corpus.out'
-path = 'output\\MSRPA.corpus.out'
+path = 'new_output\\MSRPA.corpus.out'
 para_type = defaultdict(int)
 para_ucca = {}
 total = 0
@@ -27,7 +27,7 @@ with open(path, 'r', encoding='utf8') as f:
                 break
             source_ucca_node = align[3]
             target_ucca_node = align[4]
-            if source_ucca_node == 'H' and target_ucca_node == 'H':
+            if source_ucca_node == 'H' or target_ucca_node == 'H':
                 a=1
             else:
                 if align[2] not in para_ucca.keys():
