@@ -1,0 +1,19 @@
+lex_same_polarity
+A-E-25-state department official-an assistant secretary of state
+A-E-160-people's republic of china-communist party government
+A-E-187
+A-E-215-the policy-a practice
+C-A-12-imf and argentina-two sides
+C-A-128-a bitter border wrangle between ukraine and russia-the dispute
+C-A-283-team collaboration-workplace team collaboration
+*E-C-289-investment income-capital gains and corporate dividends
+E-C-899-gross receipts-a total gross
+E-C-1237-(bad ucca, work on tupa)
+D-A-439-at least-a minimum of-(bad ucca)
+D-A-1477-by year 's end-during the final calendar quarter of 2003-?
+D-A-1981-in recent days-in the past four trading sessions-ucca ambiguity
+
+
+
+Professor Hermon-Taylor adds , An unexpected finding of the research showed that patients suffering with Irritable Bowel Syndrome ( IBS ) were also infected with the MAP bug .
+Hermon-Taylor said an unexpected finding of the research showed that patients suffering from irritable bowel syndrome ( IBS ) may also be infected with MAP .

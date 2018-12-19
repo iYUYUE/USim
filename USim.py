@@ -195,7 +195,7 @@ def ucca_parse_sentences(sentences, output_dir, model_path, clean=False, normali
         print("All", len(sentences), "sentences already parsed")
 
 
-def ucca_parse_files(filenames, output_dir, model_path, clean=False, normalize_sentence=lambda x: x):
+def ucca_parse_files(filenames, output_dir, model_path, clean=False, normalize_sentence=normalize_sentence):
     output_dir = os.path.realpath(output_dir)
     if filenames:
         for filename in filenames:
