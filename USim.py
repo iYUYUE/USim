@@ -17,6 +17,8 @@ import scripts.distances.align as align
 from ucca.ioutil import passage2file
 from ucca.convert import from_text
 
+from gensim.models import KeyedVectors
+
 POOL_SIZE = multiprocessing.cpu_count()
 full_rerank = True
 
@@ -31,11 +33,15 @@ PARSED_FILE = "parsed"
 
 
 def main(args):
+    if args.word2vec is not None:
+        model = KeyedVectors.load_word2vec_format(args.word2vec, binary=True);
+    else:
+        model = None
     if args.source_sentences is not None:
         ucca_parse_sentences(
             args.source_sentences + args.reference_sentences, args.parse_dir, args.parser_path)
         source_sentences, reference_sentences = args.source_sentences, args.reference_sentences
-        res = [str(USim(s, r, args.parse_dir)) + "\n" for s,
+        res = [str(USim(s, r, args.parse_dir, model)) + "\n" for s,
                r in zip(source_sentences, reference_sentences)]
     else:
         ucca_parse_files(args.source_files + args.reference_files,
@@ -73,10 +79,10 @@ def main(args):
                             tdict[tpair[0]] = tpair[1]
                     list_of_dicts.append(tdict)
 
-            res = [str(USim(s, r, args.parse_dir, i, i + len(source_sentences), list_of_dicts[i])) + "\n" for i, (s,
+            res = [str(USim(s, r, args.parse_dir, model, i, i + len(source_sentences), list_of_dicts[i])) + "\n" for i, (s,
                r) in enumerate(zip(source_files, reference_files))]
         else:
-            res = [str(USim(s, r, args.parse_dir, i, i + len(source_sentences))) + "\n" for i, (s,
+            res = [str(USim(s, r, args.parse_dir, model, i, i + len(source_sentences))) + "\n" for i, (s,
                r) in enumerate(zip(source_files, reference_files))]
 
     with open(args.output_file, "w") as fl:
@@ -86,8 +92,8 @@ def main(args):
 
 
 def normalize_sentence(s):
-    s = re.sub(r"\W+", r" ", s)
-    s = re.sub(r"(\s[a-zA-Z])\s([a-zA-Z]\s)", r"\1\2", s)
+    # s = re.sub(r"\W+", r" ", s)
+    # s = re.sub(r"(\s[a-zA-Z])\s([a-zA-Z]\s)", r"\1\2", s)
     s = s.lower()
     s = s.strip()
     return s
@@ -195,7 +201,7 @@ def ucca_parse_sentences(sentences, output_dir, model_path, clean=False, normali
         print("All", len(sentences), "sentences already parsed")
 
 
-def ucca_parse_files(filenames, output_dir, model_path, clean=False, normalize_sentence=lambda x: x):
+def ucca_parse_files(filenames, output_dir, model_path, clean=False, normalize_sentence=normalize_sentence):
     output_dir = os.path.realpath(output_dir)
     if filenames:
         for filename in filenames:
@@ -215,8 +221,9 @@ def _ucca_parse_text(text, output_dir, filename, clean, normalize_sentence, mode
     # text = from_text(text, split=True, one_per_line=True)
     # text = list(text)
     # By pass the UCCA tokenizor
-    text = [next(from_text(normalize_sentence(val).split(' '), passage_id=idx, tokenized=True)) for idx, val in enumerate(text)]
     # print(text)
+    text = [next(from_text(normalize_sentence(val).split(' '), passage_id=idx, tokenized=True)) for idx, val in enumerate(text)]
+
     parser = get_parser(model_path)
     out_location = os.path.dirname(parse_location(output_dir, filename, 0))
     if not os.path.isdir(out_location):
@@ -305,7 +312,7 @@ def parsed_sentence2xml(sentence, parse_dir, sent_id=None, normalize_sentence=no
         return file2passage(parse_location(parse_dir, sentence, sent_id))
 
 
-def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, dic=None, normalize_sentence=normalize_sentence):
+def USim(source, sentence, parse_dir, model, source_id=None, sentence_id=None, dic=None, normalize_sentence=normalize_sentence):
     """ accepts filename instead of sentence\source and a sentence id\source_sentence id for locating the file"""
     if align.regularize_word(source) == "":
         if align.regularize_word(sentence) == "":
@@ -318,7 +325,7 @@ def USim(source, sentence, parse_dir, source_id=None, sentence_id=None, dic=None
         source, parse_dir, source_id, normalize_sentence)
     sentence_xml = parsed_sentence2xml(
         sentence, parse_dir, sentence_id, normalize_sentence)
-    return align.fully_aligned_distance(source_xml, sentence_xml, dic)
+    return align.fully_aligned_distance(source_xml, sentence_xml, dic, model)
 
 def announce_finish():
     if sys.platform == "linux":
@@ -347,6 +354,7 @@ if __name__ == '__main__':
     parser.add_argument('-rs', '--reference_sentences', nargs='+')
     parser.add_argument('-p', "--parser_path", help="The path to the tupa model to be used, if no parameter is passed the hard-coded USim.PARSER_PATH path would be used")
     parser.add_argument('-a', "--alignment_path", help="The path to the alignment file")
+    parser.add_argument('-w', "--word2vec", help="The path to the word2vec file")
 
     args, unknown = parser.parse_known_args()
     PARSER_PATH = args.parser_path
